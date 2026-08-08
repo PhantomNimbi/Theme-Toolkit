@@ -1,6 +1,6 @@
 # Theme Toolkit
 
-Theme Toolkit v1.3.2 is a Windows 11 desktop-theme management application. The WPF app targets `.NET 8.0-windows` and manages wallpapers, cursors, sounds, icons, native Windows theme installation, and optional Cairo Shell themes.
+Theme Toolkit is a Windows 11 desktop-theme management application. The WPF app targets `.NET 8.0-windows` and manages wallpapers, cursors, sounds, icons, native Windows theme installation, and optional Cairo Shell themes.
 
 ![Preview](https://gitlab.com/theme-toolkit/theme-toolkit/-/raw/main/docs/assets/preview.png)
 
