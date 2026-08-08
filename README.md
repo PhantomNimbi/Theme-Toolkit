@@ -51,11 +51,11 @@ The installer provisions the supplied optional sound-event `.reg` files under `%
 
 | Topic | Guides |
 | :--- | :--- |
-| **Themes and resources** | [Native Theme Format](docs/theme/Configuration.md), [CLI Reference](docs/theme/Scripts.md) |
-| **Sounds** | [Sound Guide](docs/sounds/Sound-Guide.md), [Sound Management](docs/sounds/Sound-Management.md) |
-| **Assets** | [Verification](docs/assets/Asset-Verification.md), [Theme Catalog](docs/assets/All-Themes.md), [Repository Structure](docs/assets/Repository-Structure.md) |
-| **Contributing** | [Contributing Guide](docs/contributing/Contributing.md), [FAQ](docs/contributing/FAQ.md) |
-| **Project history** | [Changelog](CHANGELOG.md), [Roadmap](docs/ROADMAP.md) |
+| **Themes and resources** | [Native Theme Format](https://gitlab.com/theme-toolkit/theme-toolkit/-/blob/main/docs/theme/Configuration.md), [CLI Reference](https://gitlab.com/theme-toolkit/theme-toolkit/-/blob/main/docs/theme/Scripts.md) |
+| **Sounds** | [Sound Guide](https://gitlab.com/theme-toolkit/theme-toolkit/-/blob/main/docs/sounds/Sound-Guide.md), [Sound Management](https://gitlab.com/theme-toolkit/theme-toolkit/-/blob/main/docs/sounds/Sound-Management.md) |
+| **Assets** | [Verification](https://gitlab.com/theme-toolkit/theme-toolkit/-/blob/main/docs/assets/Asset-Verification.md), [Theme Catalog](https://gitlab.com/theme-toolkit/theme-toolkit/-/blob/main/docs/assets/All-Themes.md), [Repository Structure](https://gitlab.com/theme-toolkit/theme-toolkit/-/blob/main/docs/assets/Repository-Structure.md) |
+| **Contributing** | [Contributing Guide](https://gitlab.com/theme-toolkit/theme-toolkit/-/blob/main/docs/contributing/Contributing.md), [FAQ](https://gitlab.com/theme-toolkit/theme-toolkit/-/blob/main/docs/contributing/FAQ.md) |
+| **Project history** | [Changelog](https://gitlab.com/theme-toolkit/theme-toolkit/-/blob/main/CHANGELOG.md), [Roadmap](https://gitlab.com/theme-toolkit/theme-toolkit/-/blob/main/docs/ROADMAP.md) |
 
 ## Build
 
