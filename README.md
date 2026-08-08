@@ -6,18 +6,18 @@ Theme Toolkit is a Windows 11 desktop-theme management application. The WPF app 
 
 ## Install or Run
 
-Build the application or installer from the release tag. Binary installer archives are not published with releases.
+Build the installer from the release tag. Binary installer archives are not published with releases.
 
-- **Portable app:** Publish `ThemeToolkit.exe` as a self-contained `.NET 8.0-windows` executable and run it from any writable location. On first start it creates its normal user-data folders under `%LOCALAPPDATA%\Theme Toolkit`.
-- **Installer:** Publish `ThemeToolkitInstaller.exe` for the target architecture. It requires the .NET 10 Desktop Runtime and installs without elevation to `%LOCALAPPDATA%\Programs\Theme Toolkit`.
+- **Installer:** Publish `ThemeToolkitInstaller.exe` for the target architecture. Publishing it compiles the complete self-contained application and the uninstaller into its embedded payload. It requires the .NET 10 Desktop Runtime and installs without elevation to `%LOCALAPPDATA%\Programs\Theme Toolkit`.
 
 The installer:
 
-- Copies `ThemeToolkit.exe` and its bundled `Tools` directory to `%LOCALAPPDATA%\Programs\Theme Toolkit`.
+- Compiles and embeds the complete self-contained app (`ThemeToolkit.exe`) with its `Tools` directory, installing them to `%LOCALAPPDATA%\Programs\Theme Toolkit`.
 - Creates `%LOCALAPPDATA%\Theme Toolkit` with configuration, cache, log, output, repository, and resource folders.
 - Creates the per-user resource root at `%LOCALAPPDATA%\Theme Toolkit\Resources`, including `Cursors`, `Sounds`, `Wallpapers`, `Icons`, their `Imported` download folders, and `_hacks` for user-reviewed optional registry files.
 - Generates missing templates in `%LOCALAPPDATA%\Theme Toolkit\Resources\_templates` without overwriting existing files.
 - Creates a Start Menu shortcut and can optionally create a Desktop shortcut.
+- Registers the app in Windows Settings > Apps (Add/Remove Programs) pointing to the bundled uninstaller, which keeps user data by default unless **Remove all user data** is selected.
 
 Git and GitLab CLI (`glab`) are optional integrations for GitLab workflows. rclone is not required. When building the installer from a clone, install Git LFS and fetch the repository's LFS-managed registry archive first:
 
@@ -26,8 +26,7 @@ git clone https://gitlab.com/theme-toolkit/theme-toolkit.git
 cd theme-toolkit
 git lfs install
 git lfs pull
-dotnet publish app\ThemeToolkit\ThemeToolkit.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -o _build\v1.3.2\app\win-x64
-dotnet publish installer\ThemeToolkit_Installer\ThemeToolkitInstaller.csproj -c Release -r win-x64 --self-contained false -p:PublishSingleFile=true -o _build\v1.3.2\installer\win-x64
+dotnet publish installer\ThemeToolkit_Installer\ThemeToolkitInstaller.csproj -c Release -r win-x64 -o _build\v1.3.3\installer\win-x64
 ```
 
 Use `win-arm64` or `win-x86` in place of `win-x64` when building for those architectures. Publish the portable app first: the installer embeds the matching portable app payload and the LFS-managed `Shutdown-Logoff-Logon-Sound-Hacks.zip` archive.
