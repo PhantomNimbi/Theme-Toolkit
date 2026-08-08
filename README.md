@@ -29,7 +29,8 @@ git lfs pull
 dotnet publish installer\ThemeToolkit_Installer\ThemeToolkitInstaller.csproj -c Release -r win-x64 -o _build\v1.3.3\installer\win-x64
 ```
 
-Use `win-arm64` or `win-x86` in place of `win-x64` when building for those architectures. Publish the portable app first: the installer embeds the matching portable app payload and the LFS-managed `Shutdown-Logoff-Logon-Sound-Hacks.zip` archive.
+Use `win-arm64` or `win-x86` in place of `win-x64` when building for those architectures. Publishing the installer automatically builds the complete app payload; no separate portable-app staging step is required.
+
 
 ## Quick Start
 
