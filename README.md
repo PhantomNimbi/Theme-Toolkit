@@ -67,4 +67,4 @@ The app targets .NET 8. The separate installer project targets .NET 10.
 
 ## License
 
-BSD 3-Clause — see [LICENSE.md](LICENSE.md).
+BSD 3-Clause — see [LICENSE.md](https://gitlab.com/theme-toolkit/theme-toolkit/-/blob/main/LICENSE.md).
